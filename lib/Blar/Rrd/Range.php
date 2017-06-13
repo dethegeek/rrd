@@ -35,7 +35,7 @@ class Range {
     /**
      * @return bool
      */
-    public function hasMin(): bool {
+    public function hasMin() {
         return !is_null($this->min);
     }
 
@@ -58,7 +58,7 @@ class Range {
     /**
      * @return bool
      */
-    public function hasMax(): bool {
+    public function hasMax() {
         return !is_null($this->max);
     }
 
@@ -82,7 +82,7 @@ class Range {
      * @param mixed $value
      * @return bool
      */
-    public function validate($value): bool {
+    public function validate($value) {
         if(!$this->hasMin() and $this->getMin() >= $value) {
             return FALSE;
         }

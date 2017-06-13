@@ -38,7 +38,7 @@ class RrdArchive {
     /**
      * @return string
      */
-    public function __toString(): string {
+    public function __toString() {
         return vsprintf('%s:%.1F:%u:%u', [
             $this->getConsolidation(),
             0.5,
@@ -50,43 +50,52 @@ class RrdArchive {
     /**
      * @return string
      */
-    public function getConsolidation(): string {
+    public function getConsolidation() {
         return $this->consolidation;
     }
 
     /**
      * @param string $consolidation
+     *
+     * @return RrdArchive;
      */
     public function setConsolidation(string $consolidation) {
         $this->consolidation = $consolidation;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getSteps(): int {
+    public function getSteps() {
         return $this->steps;
     }
 
     /**
      * @param int $steps
+     *
+     * @return RrdArchive;
      */
     public function setSteps(int $steps) {
         $this->steps = $steps;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getRows(): int {
+    public function getRows() {
         return $this->rows;
     }
 
     /**
      * @param int $rows
+     *
+     * @return RrdArchive;
      */
     public function setRows(int $rows) {
         $this->rows = $rows;
+        return $this;
     }
 
 }

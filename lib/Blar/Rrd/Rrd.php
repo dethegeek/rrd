@@ -31,21 +31,21 @@ class Rrd {
     /**
      * @return string
      */
-    public function getFileName(): string {
+    public function getFileName() {
         return $this->fileName;
     }
 
     /**
      * @return bool
      */
-    public function hasDateTime(): bool {
+    public function hasDateTime() {
         return !is_null($this->dateTime);
     }
 
     /**
      * @return DateTimeInterface
      */
-    public function getDateTime(): DateTimeInterface {
+    public function getDateTime() {
         if(!$this->hasDateTime()) {
             return new DateTime();
         }
@@ -82,7 +82,7 @@ class Rrd {
     /**
      * @return array
      */
-    public function getInfo(): array {
+    public function getInfo() {
         return rrd_info($this->getFileName());
     }
 
@@ -91,14 +91,14 @@ class Rrd {
      *
      * @return array
      */
-    public function fetch(array $options): array {
+    public function fetch(array $options) {
         return rrd_fetch($this->getFileName(), $this->convertOptions($options));
     }
 
     /**
      * @return array
      */
-    public function getLastUpdate(): array {
+    public function getLastUpdate() {
         $result = rrd_lastupdate($this->getFileName());
 
         $info = [];
@@ -113,7 +113,7 @@ class Rrd {
      *
      * @return array
      */
-    public function convertOptions(array $options): array {
+    public function convertOptions(array $options) {
         $result = [];
         foreach($options as $key => $value) {
             if(!is_numeric($key)) {
