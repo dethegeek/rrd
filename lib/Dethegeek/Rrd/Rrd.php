@@ -4,7 +4,7 @@
  * @author Andreas Treichel <gmblar+github@gmail.com>
  */
 
-namespace Blar\Rrd;
+namespace Dethegeek\Rrd;
 
 use DateTime;
 use DateTimeInterface;
@@ -54,16 +54,22 @@ class Rrd {
 
     /**
      * @param DateTimeInterface $dateTime
+     *
+     * @return Dethegeek\Rrd
      */
     public function setDateTime(DateTimeInterface $dateTime) {
         $this->dateTime = $dateTime;
+        return $this;
     }
 
     /**
      * @param string $fileName
+     *
+     * @return Dethegeek\Rrd
      */
     public function setFileName(string $fileName) {
         $this->fileName = $fileName;
+        return $this;
     }
 
     /**

@@ -4,7 +4,7 @@
  * @author Andreas Treichel <gmblar+github@gmail.com>
  */
 
-namespace Blar\Rrd;
+namespace Dethegeek\Rrd;
 
 use PHPUnit_Framework_TestCase as TestCase;
 

@@ -1,17 +1,21 @@
 {
-    "name": "blar/rrd",
+    "name": "dethegeek/rrd",
     "description": "RRD for PHP",
     "type": "library",
     "keywords": [
         "php",
         "rrd"
     ],
-    "homepage": "https://github.com/blar/rrd/",
+    "homepage": "https://github.com/dethegeek/rrd/",
     "license": "LGPL-3.0+",
     "authors": [
         {
             "name": "Andreas Treichel",
             "email": "gmblar+github@gmail.com"
+        },
+        {
+            "name": "Dethegeek",
+            "email": "dethegeek@gmail.com"
         }
     ],
     "require": {
@@ -22,13 +26,13 @@
         "satooshi/php-coveralls": "^1.0"
     },
     "support": {
-        "source": "https://github.com/blar/rrd/",
-        "issues": "https://github.com/blar/rrd/issues",
-        "wiki": "https://github.com/blar/rrd/wiki"
+        "source": "https://github.com/dethegeek/rrd/",
+        "issues": "https://github.com/dethegeek/rrd/issues",
+        "wiki": "https://github.com/dethegeek/rrd/wiki"
     },
     "autoload": {
         "psr-4": {
-            "Blar\\Rrd\\": "lib/Blar/Rrd/"
+            "Dethegeek\\Rrd\\": "lib/Dethegeek/Rrd/"
         }
     }
 }

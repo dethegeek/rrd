@@ -4,7 +4,7 @@
  * @author Andreas Treichel <gmblar+github@gmail.com>
  */
 
-namespace Blar\Rrd;
+namespace Dethegeek\Rrd;
 
 use DateTimeInterface;
 use RuntimeException;
@@ -49,6 +49,8 @@ class RrdCreator {
     }
 
     /**
+     * Set the filename of the RRD database
+     *
      * @param mixed $fileName
      *
      * @return RrdCreator
@@ -66,6 +68,8 @@ class RrdCreator {
     }
 
     /**
+     * Sets the start date time of the database
+     *
      * @param DateTimeInterface $start
      *
      * @return RrdCreator
@@ -83,6 +87,8 @@ class RrdCreator {
     }
 
     /**
+     * Sets the steps of the dataase
+     *
      * @param int $step Seconds
      *
      * @return RrdCreator
@@ -100,6 +106,8 @@ class RrdCreator {
     }
 
     /**
+     * Add a data source to the database
+     *
      * @param RrdDataSource $source
      *
      * @return RrdCreator
@@ -117,6 +125,7 @@ class RrdCreator {
     }
 
     /**
+     * Add an archive to the database
      * @param RrdArchive $archive
      *
      * @return RrdCreator
@@ -126,6 +135,11 @@ class RrdCreator {
         return $this;
     }
 
+    /**
+     * Create the database
+     *
+     * @throws RuntimeException
+     */
     public function save() {
         $options = [
             '--start' => $this->getStart()->getTimestamp(),
